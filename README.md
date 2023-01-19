@@ -1,3 +1,3 @@
 # Homeworks
 
-#### HW1: Design a signup page using HTML5 test workflow
+#### HW1: Design a sign up page using HTML5

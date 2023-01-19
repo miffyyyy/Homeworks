@@ -1,0 +1,76 @@
+body {
+    text-align: center;
+}
+form {
+    width: 90%;
+    margin: auto auto;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.twoitems {
+    display: grid;
+    width: 100%;
+    gap: 5px;
+    padding: 3px 0px;
+    grid-template-columns: auto auto;
+}
+.oneitem {
+    display: grid;
+    width:100%;
+    padding: 3px 0px;
+}
+
+input {
+    line-height: 2rem;
+    border-radius: 10px;
+    border: 2px solid rgba(223, 212, 212, 0.742);
+    padding: 10px 10px;
+    
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid rgb(81, 139, 249);
+    box-shadow: 1px 1px 1px rgb(81, 139, 249), -1px -1px 5px rgb(81, 139, 249);
+}
+
+button {
+    line-height: 3rem;
+    border-radius: 4px;
+    color: white;
+    border: none;
+}
+
+.blueButton {
+    background-color: rgb(81, 139, 249);
+
+}
+
+.greenButton {
+    background-color: rgb(24, 214, 132);
+}
+
+p {
+    text-align: start;
+    font-size: 11px;
+}
+
+.blueSmallButton {
+    font-size: 10px;
+    line-height: 1rem;
+    background-color: rgb(81, 139, 249);
+}
+
+a {
+    text-decoration: none;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+#agreebox{
+    margin-left: 10px;
+}
