@@ -1,6 +1,7 @@
 body {
     text-align: center;
 }
+
 form {
     width: 90%;
     margin: auto auto;
@@ -15,9 +16,10 @@ form {
     padding: 3px 0px;
     grid-template-columns: auto auto;
 }
+
 .oneitem {
     display: grid;
-    width:100%;
+    width: 100%;
     padding: 3px 0px;
 }
 
@@ -26,13 +28,22 @@ input {
     border-radius: 10px;
     border: 2px solid rgba(223, 212, 212, 0.742);
     padding: 10px 10px;
-    
+
 }
 
 input:focus {
     outline: none;
     border: 2px solid rgb(81, 139, 249);
     box-shadow: 1px 1px 1px rgb(81, 139, 249), -1px -1px 5px rgb(81, 139, 249);
+}
+
+.blueButton:hover {
+    background-color: rgb(242, 110, 246);
+    cursor: pointer;
+}
+
+.blueButton:active {
+    background-color: rgb(255, 243, 23);
 }
 
 button {
@@ -49,6 +60,15 @@ button {
 
 .greenButton {
     background-color: rgb(24, 214, 132);
+}
+
+.greenButton:hover {
+    background-color: rgb(242, 110, 246);
+    cursor: pointer;
+}
+
+.greenButton:active {
+    background-color: rgb(255, 243, 23);
 }
 
 p {
@@ -71,6 +91,6 @@ a {
     align-items: center;
 }
 
-#agreebox{
+#agreebox {
     margin-left: 10px;
 }
