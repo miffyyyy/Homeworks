@@ -5,3 +5,6 @@
 
 #### HW2: Render a page
 [HW2_demo](https://stackblitz.com/edit/web-platform-4xaczh?file=index.html)
+
+#### HW3: Render a page
+[HW3_demo](https://stackblitz.com/edit/web-platform-nzoftr?file=styles.css,index.html)
