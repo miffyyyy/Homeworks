@@ -8,3 +8,7 @@
 
 #### HW3: Render a page
 [HW3_demo](https://stackblitz.com/edit/web-platform-nzoftr?file=styles.css,index.html)
+
+
+#### HW4: myReduce
+[HW4_demo](https://stackblitz.com/edit/js-mqa2fj?file=index.js,index.html)
