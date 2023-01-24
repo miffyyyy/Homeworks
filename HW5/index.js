@@ -9,7 +9,7 @@ const state = {
   'g': 'gold',
 };
 
-function makeDrop(){
+function drop(){
     let dropDown = document.createElement('div');
     let selectKey = document.createElement('select');
     let selectValue = document.createElement('select');
@@ -41,4 +41,4 @@ function makeDrop(){
         selectKey.value = newValue;
     }
 }
-makeDrop();
+drop();
