@@ -1,3 +1,4 @@
+https://stackblitz.com/edit/js-tbnzgm?file=index.js,index.html
 
 const state = {
   'a': 'apple',

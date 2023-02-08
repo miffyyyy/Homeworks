@@ -1,0 +1,7 @@
+<div [style.box-shadow]="card.hasShadow" [style.border-width]="card.hasBorder" [style.border-color]="card.color">
+  <h1>{{ card.title }}</h1>
+  <h2>{{ card.content }}</h2>
+  <button (click)="click()" [style.background-color]="card.color">
+    Set {{ card.color }}
+  </button>
+</div>
