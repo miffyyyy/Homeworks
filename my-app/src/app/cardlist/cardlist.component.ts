@@ -14,8 +14,6 @@ export class CardListComponent implements OnInit {
             content:
                 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...  ',
             color: 'Blue',
-            hasBorder: '0px',
-            hasShadow: 'none',
         },
 
         {
@@ -23,8 +21,6 @@ export class CardListComponent implements OnInit {
             content:
                 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... ',
             color: 'Black',
-            hasBorder: '0px',
-            hasShadow: 'none',
         },
 
         {
@@ -32,8 +28,6 @@ export class CardListComponent implements OnInit {
             content:
                 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...  ',
             color: 'Red',
-            hasBorder: '0px',
-            hasShadow: 'none',
         },
 
         {
@@ -41,8 +35,6 @@ export class CardListComponent implements OnInit {
             content:
                 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... ',
             color: 'Green',
-            hasBorder: '0px',
-            hasShadow: 'none',
         },
     ];
 
@@ -54,13 +46,8 @@ export class CardListComponent implements OnInit {
     ngOnInit(): void { }
 
     // methods
-    disableBorders(emittedCards: Card) {
-        this.titleColor = emittedCards.color;
-        for (const card of this.cards) {
-            if (card != emittedCards) {
-                card.hasBorder = '0px';
-                card.hasShadow = 'none';
-            }
-        }
+    disableBorders(color: string) {
+        console.log(color);
+
     }
 }

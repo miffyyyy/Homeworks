@@ -3,6 +3,10 @@
 </h1>
 
 <div id="cardlist-grid">
-  <app-carditem *ngFor="let card of cards" [card]="card" (idemiter)="disableBorders($event)">
+  <app-carditem *ngFor="let card of cards" [card]="card" (idemiter)="disableBorders($event)" [ngStyle]="{
+    'box-shadow' : card.color ===titleColor ? '5px 5px 0 '+ titleColor :'',
+    'border-radius' : '10px'
+
+  }">
   </app-carditem>
 </div>

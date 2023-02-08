@@ -15,8 +15,6 @@ export class CardItemComponent implements OnInit {
     ngOnInit() { }
 
     click() {
-        this.card.hasBorder = '3px';
-        this.card.hasShadow = `${this.card.color} 10px 10px`;
-        this.idemiter.emit(this.card);
+        this.idemiter.emit(this.card.color);
     }
 }
