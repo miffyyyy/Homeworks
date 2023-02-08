@@ -4,10 +4,8 @@
   </h1>
 
   <div class="cardlist-grid">
-    <app-carditem *ngFor="let card of cards" [card]="card" (idemiter)="changeColor($event)" [ngStyle]="{
-      'box-shadow' : card.color ===titleColor ? '10px 10px 0 '+ titleColor :'',
-      'border-radius' : '8px',
-      'border': '1px solid'+ titleColor }">
+    <app-carditem *ngFor="let card of cards" [card]="card" (idemiter)="changeColor($event)"
+      [ngStyle]="initCardStyle(card)">
     </app-carditem>
   </div>
 </body>
