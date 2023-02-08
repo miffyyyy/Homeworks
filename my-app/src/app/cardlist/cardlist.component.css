@@ -1,31 +1,23 @@
-* {
-  font-family: 'Londrina Shadow', cursive;
-  font-style: italic;
-}
-
 h1 {
   font-size: 1rem;
   text-align: center;
 }
 
-#cardlist-grid {
+.cardlist-grid {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-around;
-  text-align: center;
 }
 
-card {
-  display: flex;
-  width: 29em;
-  max-width: 100%;
-  position: relative;
+app-article {
+  width: 46%;
+  margin: 10px;
 }
 
-@media screen and (max-width: 800px) {
-  div {
-    display: block;
-
+@media (max-width: 500px) {
+  app-article {
+    width: 98%;
+    margin: 10px;
   }
 }

@@ -15,6 +15,7 @@ export class CardItemComponent implements OnInit {
     ngOnInit() { }
 
     click() {
+        console.log(this.card.color);
         this.idemiter.emit(this.card.color);
     }
 }

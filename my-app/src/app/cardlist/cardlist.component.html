@@ -1,12 +1,13 @@
-<h1 [style.color]="titleColor">
-  "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-</h1>
+<body>
+  <h1 [style.color]="titleColor">
+    "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+  </h1>
 
-<div id="cardlist-grid">
-  <app-carditem *ngFor="let card of cards" [card]="card" (idemiter)="disableBorders($event)" [ngStyle]="{
-    'box-shadow' : card.color ===titleColor ? '5px 5px 0 '+ titleColor :'',
-    'border-radius' : '10px'
-
-  }">
-  </app-carditem>
-</div>
+  <div class="cardlist-grid">
+    <app-carditem *ngFor="let card of cards" [card]="card" (idemiter)="changeColor($event)" [ngStyle]="{
+      'box-shadow' : card.color ===titleColor ? '10px 10px 0 '+ titleColor :'',
+      'border-radius' : '8px',
+      'border': '1px solid'+ titleColor }">
+    </app-carditem>
+  </div>
+</body>
