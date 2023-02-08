@@ -1,0 +1,23 @@
+h1 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+#cardlist-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+card {
+  width: 46%;
+  margin: 10px;
+}
+
+@media (max-width: 500px) {
+  card {
+    width: 98%;
+    margin: 10px;
+  }
+}

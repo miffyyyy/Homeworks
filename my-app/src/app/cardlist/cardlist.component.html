@@ -1,0 +1,9 @@
+<h1 [style.color]="titleColor">
+  Tempus iaculis urna id volutpat lacus laoreet Neque ornare aenean euismod
+  elementum nisi
+</h1>
+
+<div id="cardlist-grid">
+  <app-carditem *ngFor="let card of cards" [card]="card" (idemiter)="disableBorders($event)">
+  </app-carditem>
+</div>
