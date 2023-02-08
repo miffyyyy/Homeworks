@@ -46,8 +46,9 @@ export class CardListComponent implements OnInit {
     ngOnInit(): void { }
 
     // methods
-    disableBorders(color: string) {
-        console.log(color);
-
+    changeColor(color: string) {
+        // console.log(color);
+        console.log('xxx');
+        this.titleColor = color;
     }
 }

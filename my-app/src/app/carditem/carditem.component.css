@@ -12,23 +12,22 @@ h1 {
 }
 
 h2 {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
-
 div {
-  border-style: solid;
-  border-radius: 10px;
   width: 100%;
   margin: 0;
+  border-style: solid;
+  border-radius: 10px;
 }
 
 button {
-  font-size: 10px;
-  margin-left: 12px;
-  margin-bottom: 2px;
   border-radius: 4px;
-  color: ghostwhite;
+  color: white;
   padding: 10px;
   border: none;
+  font-size: 8px;
+  margin-left: 12px;
+  margin-bottom: 2px;
 }
