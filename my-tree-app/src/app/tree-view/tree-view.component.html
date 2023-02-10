@@ -1,0 +1,10 @@
+<div>
+  name: {{treeData.name}}
+  <ul>
+    <li>child:<br>
+      <div *ngFor="let childTreeData of treeData.child">
+        <app-tree-view [treeData]="childTreeData"></app-tree-view>
+      </div>
+    </li>
+  </ul>
+</div>
