@@ -1,3 +1,4 @@
 <div class="bookListContainer">
-  <app-book-item></app-book-item>
+  <app-book-item *ngFor="let book of bookList" [bookItem]='book'>
+  </app-book-item>
 </div>

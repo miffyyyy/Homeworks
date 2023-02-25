@@ -10,6 +10,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { WishItemComponent } from './wish-item/wish-item.component';
 import { WishListComponent } from './wish-list/wish-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,10 @@ import { WishListComponent } from './wish-list/wish-list.component';
     NavBarComponent,
     HomePageComponent,
     WishItemComponent,
-    WishListComponent
+    WishListComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
