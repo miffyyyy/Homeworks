@@ -11,6 +11,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { WishItemComponent } from './wish-item/wish-item.component';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     WishItemComponent,
     WishListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
