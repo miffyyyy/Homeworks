@@ -58,11 +58,10 @@ export class BookService {
     // Emit the updated wishList array as the next value of the wishList$ BehaviorSubject
     return this.wishList$.next(this.wishList);
   }
-
-  // deleteWishList(name: string) {
-  //   this.wishList = this.wishList.filter((data: wishBook) => {
-  //     return data.name !== name;
-  //   });
-  //   return this.wishList$.next(this.wishList);
-  // }
+  // Remove a book from the wishList array by its name in a vivid way(just filter out not deleted book and return new array)
+  deleteWishList(name: string) {
+    this.wishList = this.wishList.filter((book) => book.name !== name);
+    //The filter method is used to create a new array that includes all items from the original wishList array except for the one with the specified name. The filter method loops through each item in the array and calls the provided callback function, passing in the current item as an argument. If the callback function returns true, the current item is included in the new array; if it returns false, the current item is excluded from the new array.
+    return this.wishList$.next(this.wishList);
+  }
 }

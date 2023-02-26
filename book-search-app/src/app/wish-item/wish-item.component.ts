@@ -1,12 +1,14 @@
 import {
   Component,
   ElementRef,
+  EventEmitter,
   Input,
   OnDestroy,
   OnInit,
+  Output,
   ViewChild,
 } from '@angular/core';
-import { fromEvent, Subscription } from 'rxjs';
+import { fromEvent, Subscription, tap } from 'rxjs';
 import { BookService } from '../book.service';
 import { wishBook } from '../interface';
 
@@ -16,20 +18,13 @@ import { wishBook } from '../interface';
   styleUrls: ['./wish-item.component.scss'],
 })
 export class WishItemComponent {
+  constructor(private BookService: BookService) {}
   @Input() book!: wishBook;
-  // subsq = new Subscription();
-  // constructor(private elRef: ElementRef) {}
-  // @ViewChild('myButton', { static: true }) myButton!: ElementRef;
+  @Output() RemoveFromWishlist = new EventEmitter<string>();
 
-  // ngOnInit(): void {
-  //   // this.subsq = fromEvent(this.myButton.nativeElement, 'click').subscribe(
-  //   //   () => {
-  //   //     console.log('Button clicked!');
-  //   //   }
-  //   // );
-  // }
+  onRemoveFromWishlist() {
+    console.log('remove', this.book.name);
 
-  // ngOnDestroy(): void {
-  //   this.subsq.unsubscribe();
-  // }
+    this.BookService.deleteWishList(this.book.name);
+  }
 }

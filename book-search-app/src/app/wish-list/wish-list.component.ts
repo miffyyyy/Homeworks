@@ -11,9 +11,9 @@ export class WishListComponent {
   wishList: wishBook[] = [];
   constructor(private bookService: BookService) {}
   ngOnInit(): void {
-    console.log('qq', typeof this.bookService, this.bookService);
+    // console.log('qq', typeof this.bookService, this.bookService);
     this.bookService.wishList$.subscribe((data: any) => {
-      console.log('xxxx');
+      // console.log('xxxx');
       this.wishList = data;
     });
   }

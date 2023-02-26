@@ -1,13 +1,16 @@
 .wishItemContainer {
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  img {
-    float: left;
-    margin-right: 20px; /* 设置图片和文本之间的间距 */
+  padding: 0.9rem;
+  display: flex;
+  align-items: center; 
   }
   
   .text {
-    padding-top: 10px; /* 设置文本的上边距 */
+    flex: 1
+  
+  }
+  
+  button {
+ 
+    margin-left: 2px;
+   
   }

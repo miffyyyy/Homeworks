@@ -1,5 +1,7 @@
 <div *ngIf="book" class="wishItemContainer">
   <div class="text">
-    <h3>{{book.name}}</h3>
+    {{book.name}}
   </div>
+  <button (click)="onRemoveFromWishlist()">X</button>
+
 </div>

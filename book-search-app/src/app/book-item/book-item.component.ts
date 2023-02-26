@@ -27,9 +27,9 @@ export class BookItemComponent {
   @Output() addToWishlist = new EventEmitter<string>();
 
   onAddToWishlist() {
-    console.log('lllll', this.bookItem.name);
+    // console.log('lllll', this.bookItem.name);
     // this.addToWishlist.emit(this.bookItem.name);
-    console.log('iiii', this.bookService);
+    // console.log('iiii', this.bookService);
     this.bookService.addWishList({ name: this.bookItem.name });
   }
 }
