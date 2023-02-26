@@ -1,7 +1,5 @@
-<div class="wishItemContainer">
+<div *ngIf="book" class="wishItemContainer">
   <div class="text">
-    <h2>My Heading</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit, sapien nec accumsan suscipit, sapien
-      augue tristique lorem, et convallis quam nibh a odio.</p>
+    <h3>{{book.name}}</h3>
   </div>
 </div>

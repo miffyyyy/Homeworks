@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { apiData, EachBook } from './interface';
+import { ApiData, EachBook, wishBook } from './interface';
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, of, Subject, tap } from 'rxjs';
 
@@ -10,12 +10,17 @@ export class BookService {
   bookList: EachBook[] = [];
   bookList$ = new Subject();
 
-  constructor(private http: HttpClient) {}
+  wishList: wishBook[] = [];
+  wishList$ = new Subject();
+
+  constructor(private http: HttpClient) {
+    console.log('123');
+  }
 
   getBooks(name: string): Observable<any> {
     const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${name}`;
     if (name.trim() !== '') {
-      return this.http.get<apiData>(apiUrl).pipe(
+      return this.http.get<ApiData>(apiUrl).pipe(
         tap((data) => {
           this.bookList = data.items.map((each: any) => {
             return {
@@ -45,4 +50,19 @@ export class BookService {
     }
     return of(0);
   }
+
+  addWishList(book: wishBook) {
+    // Add the book to the wishList array
+    this.wishList.push(book);
+    console.log(book);
+    // Emit the updated wishList array as the next value of the wishList$ BehaviorSubject
+    return this.wishList$.next(this.wishList);
+  }
+
+  // deleteWishList(name: string) {
+  //   this.wishList = this.wishList.filter((data: wishBook) => {
+  //     return data.name !== name;
+  //   });
+  //   return this.wishList$.next(this.wishList);
+  // }
 }

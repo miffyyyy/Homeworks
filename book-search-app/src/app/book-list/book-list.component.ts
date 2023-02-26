@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../book.service';
-import { EachBook } from '../interface';
+import { EachBook, wishBook } from '../interface';
 
 @Component({
   selector: 'app-book-list',
@@ -9,6 +9,7 @@ import { EachBook } from '../interface';
 })
 export class BookListComponent implements OnInit {
   bookList: EachBook[] = [];
+  wishlist: wishBook[] = [];
   constructor(private bookService: BookService) {}
 
   ngOnInit(): void {
@@ -17,5 +18,9 @@ export class BookListComponent implements OnInit {
       this.bookList = data;
       console.log(this.bookList);
     });
+  }
+  addBookToWishlist(name: string) {
+    const book = { name };
+    this.wishlist.push(book);
   }
 }

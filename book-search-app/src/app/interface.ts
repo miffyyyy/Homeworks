@@ -5,7 +5,7 @@ export interface EachBook {
   data: string;
   description: string;
 }
-export interface apiData {
+export interface ApiData {
   items: [];
 }
 export interface wishBook {
