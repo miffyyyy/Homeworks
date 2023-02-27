@@ -3,8 +3,7 @@
   <app-nav-bar [showWishlistHandler]="showWishlistHandler" [showHomeHandler]="showHomeHandler"></app-nav-bar>
   <app-search-input></app-search-input>
   <div class="bottomContainer">
-    <app-book-list *ngIf="!showWishlist"></app-book-list>
-    <!-- This code uses Angular's *ngIf directive to conditionally render the booklistcomponent based on the value of the showWishlist property. If showWishlist is true, the booklistcomponent will be displayed. If showWishlist is false, the booklistcomponent will not be displayed. -->
+    <app-book-list [ngStyle]="{ display: isHidden ? 'none':'block' }"></app-book-list>
     <app-wish-list></app-wish-list>
   </div>
 </div>

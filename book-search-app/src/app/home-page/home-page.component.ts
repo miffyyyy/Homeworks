@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -6,15 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent {
-  showWishlist: boolean = false;
+  isHidden: boolean = false;
+
   constructor() {
     this.showWishlistHandler = this.showWishlistHandler.bind(this);
     this.showHomeHandler = this.showHomeHandler.bind(this);
   }
-  showWishlistHandler() {
-    this.showWishlist = true;
+  ngOnInit() {
+    this.isHidden = false; // set isHidden to false when component is initialized
   }
+  showWishlistHandler() {
+    this.isHidden = !this.isHidden;
+  }
+
   showHomeHandler() {
-    this.showWishlist = false;
+    this.isHidden = false; // always show booklist component
   }
 }

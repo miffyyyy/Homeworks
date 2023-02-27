@@ -13,7 +13,7 @@ import { BookService } from '../book.service';
   templateUrl: './search-input.component.html',
   styleUrls: ['./search-input.component.scss'],
 })
-export class SearchInputComponent implements OnInit, OnDestroy {
+export class SearchInputComponent implements OnInit {
   bookname: string = '';
   @ViewChild('inputbook', { static: true }) inputbox!: ElementRef;
   subsq = new Subscription(); // the new Subscription() is needed to store the subscription object returned by the fromEvent observable, which is used to unsubscribe from the observable when the component is destroyed.
