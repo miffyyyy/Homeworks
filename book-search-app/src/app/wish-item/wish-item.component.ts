@@ -1,14 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  EventEmitter,
-  Input,
-  OnDestroy,
-  OnInit,
-  Output,
-  ViewChild,
-} from '@angular/core';
-import { fromEvent, Subscription, tap } from 'rxjs';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BookService } from '../book.service';
 import { wishBook } from '../interface';
 

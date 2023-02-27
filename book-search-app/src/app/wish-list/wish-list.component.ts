@@ -17,7 +17,7 @@ export class WishListComponent {
       this.wishList = data;
     });
   }
-  ngOnDestroy(): void {
-    this.bookService.wishList$.unsubscribe();
-  }
+  // ngOnDestroy(): void {
+  //   this.bookService.wishList$.unsubscribe();
+  // }
 }
