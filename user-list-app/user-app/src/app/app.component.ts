@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User, UserList } from './interfaces/user-info.interface';
+import { User } from './interfaces/user-info.interface';
 import { UserService } from './services/user.service';
 
 @Component({
@@ -8,13 +8,13 @@ import { UserService } from './services/user.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'user-app';
   users: User[] = [];
   constructor(private userService: UserService) {}
   ngOnInit(): void {
-    this.userService.getData().subscribe();
-    this.userService.UserList$.subscribe((data: User[]) => {
-      this.users = data;
+    this.userService.getUsers().subscribe();
+    this.userService.userList$.subscribe((users: User[]) => {
+      this.users = users;
+      console.log(this.users);
     });
   }
 }

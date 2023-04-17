@@ -1,0 +1,33 @@
+.user-card {
+    border: 2px solid blue;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    max-width: 300px;
+    border-radius: 20px;
+    // max-width: fit-content;
+  }
+  
+  .user-avatar-and-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .user-avatar {
+    flex-shrink: 0;
+  }
+  
+  .user-infos {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .user-email {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: auto;
+  }
+  

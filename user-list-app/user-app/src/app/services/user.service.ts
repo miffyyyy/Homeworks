@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { ApiData, User } from '../interfaces/user-info.interface';
 
 @Injectable({
@@ -9,31 +9,20 @@ import { ApiData, User } from '../interfaces/user-info.interface';
 })
 export class UserService {
   private apiUrl = 'https://reqres.in/api/users';
-
-  UserList: User[] = [];
-  UserList$ = new Subject<User[]>();
+  userList$ = new BehaviorSubject<User[]>([]);
 
   constructor(private http: HttpClient) {}
 
-  getData(): Observable<ApiData> {
+  getUsers(): Observable<User[]> {
     return this.http.get<ApiData>(this.apiUrl).pipe(
-      tap((data) => {
-        map((data: ApiData) => {
-          const users = data.data.map((item: any) => ({
-            email: item.email,
-            first_name: item.first_name,
-            last_name: item.last_name,
-            avatar: item.avatar,
-          }));
-          this.UserList = users;
-          this.UserList$.next(users);
-          console.log(users);
-        }),
-          catchError((err: any) => {
-            console.log(err);
-            return err;
-          });
+      map((response: ApiData) => {
+        const users = response.data as User[];
+        this.updateUserList(users);
+        return users;
       })
     );
+  }
+  private updateUserList(users: User[]): void {
+    this.userList$.next(users);
   }
 }

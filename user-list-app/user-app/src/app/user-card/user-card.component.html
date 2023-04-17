@@ -1,6 +1,11 @@
 <div class="user-card">
-  <div class="user-infos">
-    <p>{{user.first_name}}{{user.last_name}}</p>
-    <p>{{user.email}}</p>
-    <p>{{user.avatar}}</p>
+  <div class="user-avatar-and-info">
+    <div class="user-avatar">
+      <img [src]="user.avatar" style="width:80px">
+    </div>
+    <div class="user-infos">
+      <p>{{user.first_name}} {{user.last_name}} ｜</p>
+    </div>
   </div>
+  <div class="user-email">{{user.email}}</div>
+</div>

@@ -3,7 +3,8 @@ export interface ApiData {
   per_page: number;
   total: number;
   total_pages: number;
-  data: Array<object>;
+  data: User[];
+  support: Support;
 }
 
 export interface User {
@@ -13,6 +14,7 @@ export interface User {
   avatar: string;
 }
 
-export interface UserList {
-  user: User;
+export interface Support {
+  url: string;
+  text: string;
 }
